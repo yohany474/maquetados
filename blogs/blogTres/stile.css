@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container-grid{
+    display: grid;
+}
+.wrap{
+    background-color: lightgray;
+    grid-area: wwrap;
+    margin: 10px;
+}
+.header{
+    grid-area: header;
+    background-color: rgb(0, 179, 255);
+    border-bottom: .1rem solid rgb(159, 159, 159);
+    margin-bottom: .3rem ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 2rem;
+    color: white;
+}
+.slider{
+    background-color: lightblue;
+    grid-area: slider;
+    margin-bottom: .0rem;
+}
+.menu{
+    background-color:rgb(0, 179, 255);
+    grid-area: mennu
+}
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 0px;
+    padding: 1rem;
+    border-top: 2px solid rgb(159, 159, 159);
+}
+.container-grid{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "slider"
+    "mennu"
+    "footer"
+    ;
+}
+.container-grid{
+    grid-template: 
+    "header" 190px 
+    "slider"  440px
+    "mennu" 100px
+    "footer" 100px /100%
+    ;
+}
+
+/*----------------------CONTROL DEL SLIDER--------------------------------------------------*/
+
+/*
+bloque donde se encuentra 
+funciones para el slider 
+*/

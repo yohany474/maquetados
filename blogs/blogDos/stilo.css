@@ -1,0 +1,156 @@
+*{
+    margin: 5px;
+    padding: 10;
+}
+
+header h1 {
+    text-align: center;
+}
+/*estilos al navg del menu principal se aplica propiedades al elemento*/
+nav{
+    width: 100%;
+}
+.menu_list{
+    margin-top: 0px;
+    text-align: left;
+    background-color:transparent;
+    height: 50px;
+    margin-bottom:  0px;
+    padding-top: 5px ;
+   
+}
+.list_item{
+    display:inline-block;
+    list-style: none; 
+    padding-right: 3px;
+    margin-left: 12px;
+}
+.link{
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    position: relative;
+}
+/*grid container para elementos de una pagina web*/
+.grid-container{
+    display: grid;
+}
+.section{
+    display: grid;
+}
+/*se nombran areas grid
+para los elementos*/
+.header{
+    background-color: lightpink;
+    grid-area: header;
+}
+.nav{
+    background-color: rgb(46, 158, 195);
+    grid-area: nav;
+}
+.section{
+    grid-area: section;
+}
+.article1{
+    grid-area: article1;
+    border: 2 px solid rgb(255, 138, 138);
+}
+.article2{
+    grid-area: article2;
+}
+.footerS{
+    background-color: rgb(249, 255, 83);
+    grid-area: footerS;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    background-image: url("images/banner.jpg");
+    grid-area: footer;
+}
+.footer li {
+    list-style: none;
+    font-size: 2.2rem;
+    color: rgb(255, 255, 255);
+}
+li:hover{
+    background-color: rgb(0, 132, 176);
+}
+/*se nombran
+areas grid se ordenan los elementos
+ ára darle la estructura
+*/
+.grid-container {
+    display: grid;
+    gap: 0px;
+    grid-template-areas:
+        "header"
+        "nav"
+        "section" 
+        "footer"
+        ;
+}
+.grid-container {
+        grid-template: 
+            "header header" 100px   /*<--fila numero 1 su altura*/
+            "nav nav" 60px    /*<--fila numero 1 su altura*/
+            "section section" 600px    /*<--fila numero 1 su altura*/
+            "footer footer" 180px /50%    /*<--fila numero 1 su altura*/
+        ;
+    }
+
+/*se ordenan areas
+ grid a la section*/
+.section{
+    display: grid;
+    gap: 0px;
+    grid-template-areas: 
+    "article1"
+    "article2"
+    "footerS"
+    ;
+}    
+.section{
+    grid-template: 
+    "article1 article2" 500px   /*<--fila numero 1 su altura*/
+    "footerS footerS" 100px /50% 50%   /*<--fila numero 1 su altura*/
+    ;
+}
+/*
+article y su contenido
+ para elemento y subpartes para 
+*/
+.article1 img{
+    width: 300px;
+    height: 250px;
+
+}
+.article2 img{
+    width: 300px;
+    height: 180px;
+}
+
+.subart1 p{
+    float: right;
+    width: 50%;
+}
+.subpart1 img{
+    float: left;
+    width: 40%;
+}
+.clear{
+    clear: both;
+}
+.subart2 p{
+    float: right;
+    width: 50%;
+}
+.subpart2 img{
+    float: left;
+    width: 40%;
+}
