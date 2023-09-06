@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    background-color: #202024;
+    height: 100vh;
+    flex-direction: column;
+   
+} 
+main{
+    flex: 1;
+    display: flex;
+    background-color: #202024;
+}
+.aside1{
+    padding-left: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    border: 1px solid rgb(50, 50, 50);
+}
+.lista{
+    flex: 1;
+    display: flex;
+    color: #fff;
+    gap: .5em;
+}
+.lista i{
+    font-size: 1.1em;
+}
+.lista p{
+    font-size: 1em;
+}
+.lista2{
+    flex: 1;
+    display: flex;
+    color: rgb(113, 113, 113);
+}
+.aside2{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #313135;
+    border: 1px solid rgb(50, 50, 50);
+}
+.contenedor{
+    display: flex;
+    border: 1px solid;
+    flex-direction: column;
+    flex: 1;
+    flex-direction: column;
+}
+.for{
+    color: #e8e8e8;
+    font-size: 1.4em;
+}
+#header{
+    height: 5rem;
+    align-items: center;
+    display: flex;
+    background-size: cover;
+    background-image: url("img/background2.png");
+}
+.logo img{ 
+  width: 16rem;
+  height: 3rem;
+
+}
+.search{
+    display: flex;
+    gap: 1em;
+    flex: 1;
+    align-items: center;
+    background-color: #3c3c3e;
+    border-radius: 1em;
+    margin-left: 1em;
+}
+.busqueda{
+    flex: 1;
+    background-color: #3c3c3e;
+    outline: none;
+    border: none;
+    border-radius: 1em;
+    height: 3em;
+    color: #ffff;
+    padding-left: 1em;
+
+}
+
+.botoncito1{
+    width: 6em;
+    border-radius: 2em;
+    border: none;
+    color: #eee;
+    height: 3rem;
+    border: 1px solid #eee;
+    background-color: #3c3c3e;
+}
+.botoncito2{
+    border-radius: 2em;
+    width: 6em;
+    border: none;
+    color: #eee;
+    height: 3rem;
+    background-color: #4a72f5;
+}
+.profile {
+    height: 2rem;
+}
+
+.line{
+    height: 1em;
+    width: 2px ;
+    background-color: rgb(126, 126, 126);
+}
+i{
+    color: #fff;
+}
+.fa-magnifying-glass{
+    background-color: blue;
+    clip-path: circle(50% at 50%);
+    color: #fff;
+    padding: .5em;
+}
+.fa-bars{
+    color: #e8e8e8;
+    margin-left: 1em;
+}
+.headerfinal{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    justify-content: space-between;
+    padding-left: 2em;
+}
+.fa-user{
+    color: #3c3c3e;
+    background-color: rgb(37, 37, 255);
+    font-size: 2.5em;
+    margin-right: 1em;
+    clip-path: circle(50% at 50%);
+}
+.listart{
+    border-bottom: 1px solid #aeaeb2;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.listartt{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.art1{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    font-family: sans-serif;
+    height: 20em;
+    gap: 7px;
+    color: #fff;
+    background-color:  #313135;
+}
+.art1 img{
+    width: 45%;
+    height: 9em;
+    align-self: flex-start;
+    border-radius: 1em;
+}
+.artaside{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    color: #fff;
+    padding: 1em;
+}
+#cerrar{
+    position: absolute;
+    right: 1%;
+    font-size: 1.6em;
+
+}
+.fa-xmark{
+    font-size: 1.5em;
+}
+.art2{
+    padding:0  1em;
+    display: flex;
+    flex-direction: column; 
+    height: 20em;
+    width: 45%;
+    background-color:  #313135;
+    border-radius: 1em;
+    color: #ffffff;
+}
+#diviarticulos{
+    padding: 0 1em;
+    padding-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.hr{
+    margin: 1em;
+    margin-top: 2em;
+    color: #aeaeb2;
+    border: 1px solid;
+}
+.anuncio{
+    margin: 1em;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #3c3c3e;
+    background-image: url("img/background2.png");
+    background-size: cover;
+}
+.anuncio h3{
+    color: #fff;
+}
+.anuncio p{
+    color: #fff;
+
+}
+.botonanuncio{
+    width: 60%;
+    background-color: #4a72f5;
+    height: 4rem;
+    color: #fff;
+    border: none;
+    border-radius: 2em;
+}
+input[type="search"]::placeholder{
+    color: rgb(255, 255, 255) !important;
+}

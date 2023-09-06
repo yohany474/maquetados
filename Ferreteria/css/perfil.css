@@ -1,0 +1,173 @@
+/*se resetean los estilos css en los navegadores*/
+*{
+    margin: 0;
+    padding: 0;
+}
+/*se personaliza el fondo*/
+
+body{
+    background-image: url("imagenes/fondo.jpg");
+    background-repeat: no-repeat;
+    color:rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: 0;
+}
+/*se hace limpieza para las sections flotantes*/
+.clear{
+    clear: both;
+}
+
+/*estyle del div principal parte superior*/
+#contenedor_cabezera{
+    width: 100%;
+    height: 60px;
+    background-color: #f58b4a;
+    margin-bottom: 0px;
+}
+#contenedor_cabezera h4{
+    color:rgb(250, 250, 250);
+    font-family: monospace;
+    font-size: 30px;
+    padding: 15px 20px;
+}
+ 
+/*estilos al navg del menu principal*/
+nav{
+    width: 100%;
+}
+.menu_list{
+    margin-top: 0px;
+    text-align: left;
+    background-color: #403f3e;
+    height: 38px;
+    margin-bottom: 0px;
+    padding-top: 5px ;
+   
+}
+.list_item{
+    display:inline-block;
+    list-style: none; 
+    padding-right: 3px;
+    margin-left: 12px;
+}
+.link{
+
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.8rem;
+    position: relative;
+}
+.link:after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: #f58b4a;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+
+}
+
+/*cambios de tipo estilo al poner el cursor sobre los elementos 'a' (enlaces) */
+.link:hover:after{
+    width: 100%;
+    right: 0;
+}
+
+
+.enlace:after{
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color:rgb(25, 241, 248);
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+
+
+
+    
+}
+.enlace:hover:after{
+    width: 100%;
+    right: 0;
+
+}
+
+/*estilos al primer "bloque de presentacion" es al centrado  tambien se dan estilos a los h, p estilos a la tabla donde esta ubicado el perfil*/
+
+#presentacion table{
+    color: #000;
+    width: 100%;
+    height: 800px;
+    border: #dfd4d4  8px solid;
+}
+table h3{
+  text-align: center;
+  font-family: fantasy;
+}
+table p{
+    font-family: monospace;
+    font-size: 23;
+    padding-left: 5px;
+}
+table{
+    background-color: beige;
+}
+#in{
+    background-color: rgb(39, 38, 38);
+}
+#presentacion img{
+    height: 450px;
+    width: 350px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#presentacion{
+    width: 400px;
+    height: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+/*cuando el display sea un celular*/
+@media(max-width: 600px){
+    #principal{
+        width: 100%;
+        float: none;
+        margin-left: 2px;
+        margin-right: 2px;
+
+    }
+    #lateral{
+        width: 100%;
+        float: none;
+        margin-left: 2px;
+        margin-right: 2px;
+
+    } 
+    nav{
+        margin-bottom:  5px; 
+    }
+    .link{
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.1rem;
+        position: relative; 
+        padding-left: 0px;
+    
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>EXAMEN</title>
+</head>
+
+<body id="grid-container">
+    <a href="/maquetados/" style="position: fixed; top: 1em; left: 2em; font-size: 1.1em; color: rgb(0, 153, 255); text-decoration: none; font-weight: bold; background-color: aliceblue;"> Inicio</a>
+    <header id="header-principal">
+        <img src="images/part1.jpg" id="part1">
+        <img src="images/logotype.jpg" id="logo">
+        <img src="images/part2.jpg" id="part2">
+    </header>
+    <section id="slider">
+        <div class="sliderr">
+            <ul style="float:left;" id="imagenes">
+                <li class="a"><img src="images/img1.jpg" class="imag"></li>
+                <li class="a"><img src="images/img2.jpg" class="imag"></li>
+                <li class="a"><img src="images/img3.jpg" class="imag"></li>
+            </ul>
+        </div>
+    </section>
+    <aside id="aside-navar">
+        <nav id="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">page1</a></li>
+            <li><a href="#">page2</a></li>
+            <li><a href="#">page3</a></li>
+            <li><a href="#">Sena</a></li>
+        </nav>
+    </aside>
+    <main id="main-principal">
+        <header id="header-main">
+            <img src="images/bannerS.png">
+        </header>
+        <article id="art1" class="articulos">
+            <h2>Guerra Ucrania</h2>
+            <p>La guerra en Ucrania cumple este miércoles seis meses, 182 días en los que Rusia no ha conseguido grandes
+                logros en el país.
+                De hecho, la ofensiva lleva semanas estancada en la región de Donetsk,
+                mientras Ucrania se perpara para una contraofensiva
+            </p>
+            <img src="images/art1.jpg">
+            <p>Precisamente, el presidente ucraniano, Volodímir Zelenski, aseguró el martes estar dispuesto a retomar
+                Crimea en cualquier momento,
+                una zona en la que Rusia recientemente reconoció sabotajes por primera vez desde su toma en 2014.
+            </p>
+        </article>
+        <article id="art2" class="articulos">
+            <h2>Ucrania antes de la invasión</h2>
+            <img src="images/art2.jpg">
+            <p>Antes de la invasión, separatistas prorrusos controlaban cantidades significativas de territorio en el
+                Donbás, en el este de Ucrania</p>
+        </article>
+    </main>
+    <section id="inferior">
+        <div id="slide">
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/img11.jpg" style="width:100%">
+                    <div class="text">Estragos de la guerra</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/img22.jpg" style="width:100%">
+                    <div class="text">Daño en infraectructura</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/img33.jpg" style="width:100%">
+                    <div class="text">Miedo a los habitantes</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="section-inferior">
+            <article class="arti-l">
+                <h2>Señales de una contraofensiva de Ucrania</h2>
+                <p>Desde hace semanas, ha habido reportes sobre posibles operaciones ofensivas de parte de Ucrania en el
+                    sur del país,
+                    y de ataques preliminares contra posiciones rusas en territorio ocupado.
+                </p>
+
+            </article>
+            <article class="arti-r">
+                <h2>Rusia podría retomar la iniciativa en la guerra</h2>
+                <p>Más allá de las señales de una posible contraofensiva ucraniana en el sur, Rusia sigue atacando y
+                    avanzando,
+                    también lentamente, en el estancado frente del Donbás, en el este. Y podría escalar en sus ataques
+                    en Ucrania, ya sean bombardeos o en un un ataque sobre Odesa </p>
+            </article>
+        </div>
+    </section>
+    <footer id="footer">
+        Yohany Santanilla Mejia-Version 2022 &copy; m2
+    </footer>
+    <script src="funcion.js"></script>
+    <!---->
+</body>
+
+</html>

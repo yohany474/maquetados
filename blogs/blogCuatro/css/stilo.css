@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    grid-area: encabezado;
+    background-image: url("../img/banner.png");
+    background-repeat: no-repeat;
+}
+.nav{
+    grid-area: navegador;
+
+    list-style: none;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    padding: 0px 8px;
+    border-top: 2px solid #000;
+}
+.tabs  li {
+    padding: 5px 0px;
+    margin: 0px 1em;
+    list-style: none;
+}
+a:hover{
+    color: lightblue;
+}
+a:active{
+    color: rgb(212, 0, 255);
+}
+.tabs{
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    justify-content: space-around;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}
+.main{
+    grid-area: main;
+    box-shadow: 2px 2px 3px 2px rgb(212, 0, 255);
+    margin: 1rem;
+}
+.section{
+    grid-area: seccion;
+}
+.footer{
+    text-align: center;
+
+    grid-area: foot;
+    background-color: lightgray;
+  
+}
+.secciones{
+    grid-area: secciones;
+    margin: 1.6rem;
+    padding: 1.5rem;
+    
+
+
+}
+/*se ordenan las areas  del grid container*/
+.container-grid{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "encabezado"
+    "navegador"
+    "main"
+    "seccion"
+    "foot"
+    ;
+}
+
+
+/*el ancho y alto de cada columna*/
+.container-grid{
+    grid-template:
+    "encabezado" 326px
+    "navegador"  70px
+    "main"       350px
+    "seccion"    150px
+    "foot"       100px   /100%
+    ;
+}
+
+/*flex contenedor*/
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+/*articulos estilos */
+article{
+    height: 100px;
+    
+}
+article img{
+    width: 170px;
+    max-height: 80px;
+}
+#banner{
+    width: 100%;
+
+}
+/*se applica grid al elemento secciones para ubicra nuestro elementos*/
+.main{
+    grid-template-areas: "secciones";
+    grid-template: "secciones" 330px /100%;
+}
+
+/*fuentes*/
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    
+}
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+}
