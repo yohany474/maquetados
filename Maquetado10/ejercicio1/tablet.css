@@ -1,0 +1,141 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+/*
+propiedades al tipo de letra 
+p, & h.
+*/
+h3{
+    font-family: Tahoma, sans-serif;
+    font-size: medium;
+}
+p{
+    font-family: Verdana, sans-serif;
+    font-size: 0.8em;
+}
+/*
+se agregan propiedades 
+a los demas elementos 
+*/
+.header,
+.article1,
+.article2,
+.article3,
+.nav{
+    border: 1px solid #000;
+    margin: .6em;    
+}
+.nav {
+    display: flex;
+    flex-direction:row;
+    justify-items: center;
+    justify-content: space-between;
+}
+.nav li{
+    margin: 5px 0px;
+    padding: 10px;
+    list-style: none;
+}
+.header img{
+    height:10em ;
+}
+/**/
+
+.header{
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    justify-items: start;
+}
+.article1,
+.article2,
+.article3{
+    border-radius: 1em;
+    padding: 10px;
+}
+.footer{
+    margin: .6em;
+    background-color:rgb(255 127 0);
+    background-repeat: no-repeat;
+    border: 1px solid #000;
+}
+/*
+display grid para
+maquetacion principal 
+*/
+.container-grid{
+    display: grid;
+    border: 1px solid #000;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template: 
+    "header"  11em
+    "main"   730px
+    "footer"  11em /100%
+    ;
+}
+/*se aplica display grid al main*/
+
+.main{
+    grid-template-areas:
+    "nav"
+    "article"
+    "article"
+    "article";
+    
+    grid-template:
+    "nav nav" 80px
+    "article1 article1 " 240px
+    "article2 article2 " 210px
+    "article3 article3" 210px  / 50% 50%
+    ;
+ 
+}
+
+
+/*se nombran areas dentro del grid*/
+
+.main{
+    grid-area: main;
+    display: grid;  
+}
+.footer{
+    grid-area: footer;
+}
+.article1{
+    grid-area: article1;
+}
+.article2{
+    grid-area: article2;
+}
+.article3{
+    grid-area: article3;
+}
+.nav{
+    grid-area: nav;
+}
+
+
+/*
+pseudoclases para elemento enlace
+*/
+a{
+    color: rgb(255 127 0);
+    font-family: Verdana, sans-serif;
+    font-size: small;
+}
+a:hover{
+    color: tomato;
+}
+a:active{
+    color: blue;
+}
+/*
+hasta esta linea *
+*/

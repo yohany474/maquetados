@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*
+stilos de fuente al contenido
+general de nuestra pagina
+ */
+h3{
+    font-family: Tahoma, sans-serif;
+}
+h2{
+    font-size: 1.5em;
+    font-family: Tahoma, sans-serif;
+}
+p{
+    font-family: Verdana, sans-serif;
+}
+span{
+    color: rgb(255, 127, 0) ;
+}
+/*stilos a cada elemento del body llamados 
+por selectores de CLASES y ID */
+
+.header,
+.article1,
+.article2,
+.article3,
+.nav{
+    border: 1px solid #000;
+    margin: .6em;    
+}
+#logoEncabezado{
+    height: 120px;
+    width: 120px;
+}
+#line{
+    width: 11px;
+    height: 80px;
+    margin: 0px 5px 0px em;
+}
+/*navar de nuestra pagina*/
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: stretch;
+}
+.nav li{
+    margin: 5px 0px;
+    padding: 10px;
+    list-style: none;
+}
+.article1,
+.article2,
+.article3{
+    border-radius: 1em;
+
+    padding: 10px;
+}
+/*pie del documento para ubicar elemento flex*/
+.footer{
+    display: flex;
+    justify-content:start;
+    justify-items: center;
+    margin: .6em;
+    background-color: rgb(255, 127, 0);
+    border: 1px solid #000;
+}
+.footer img{
+    width: 100px;
+    height: 100px;
+
+}
+
+.div{
+    color: #fff;
+}
+
+/*se nombran  las Areas dentro del grid*/
+.header{
+    grid-area: header;
+
+
+}
+.main{
+    grid-area: main;
+    display: grid;
+}
+.footer{
+    grid-area: footer;
+}
+.article1{
+    grid-area: article1;
+}
+.article2{
+    grid-area: article2;
+}
+.article3{
+    grid-area: article3;
+}
+.nav{
+    grid-area: nav;
+}
+
+/*contenedor grid principal*/
+.container-grid{
+    display: grid;
+    border: 1px solid #000;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template: 
+    "header"  145px
+    "main"   800px
+    "footer"  120px /100%
+    ;
+}
+/*contenedor main con display grid*/
+
+.main{
+    grid-template-areas:
+    "nav"
+    "article"
+    "article"
+    "article";
+
+    grid-template:
+    "nav article1" 260px
+    "nav article2" 260px
+    "nav article3" 260px  / 20% 80%
+    ;
+}
+/*
+pseudoclases para elemento enlace
+*/
+a{
+    color: rgb(255, 127, 0);
+    font-family: Verdana, sans-serif;
+}
+a:hover{
+    color: tomato;
+}
+a:active{
+    color: blue;
+}
+/*
+hasta esta linea *
+*/
