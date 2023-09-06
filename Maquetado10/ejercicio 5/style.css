@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*elementos p h3 */
+a{
+    color: rgb(255, 127, 0);
+    font-family: Verdana, sans-serif;
+}
+h3{
+    font-family: Tahoma, sans-serif;
+}
+p{
+    font-family: Verdana, sans-serif;
+}
+span{
+    color:rgb(255, 127, 0);
+} 
+h2{
+    font-size: 1.5em;
+    font-family: Tahoma, sans-serif;
+}
+#line{
+    width: 11px;
+    height: 80px;
+    margin: 0px 5px 0px em;
+}
+.div{
+    color: #fff;
+}
+.header img{
+    height: 80px;
+    width: 82px;
+}
+.footer  img{
+    width: 120px;
+    height: 100px;
+    
+
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+}
+.nav li{
+    margin: 5px 0px;
+    padding: 10px;
+    list-style: none;
+}
+.header{
+    grid-area: header ;
+    margin-bottom: 10px;
+    background-color: beige;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: stretch;
+    justify-items: center;
+}
+.main{
+    border: 1px solid #000;
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+    margin-top: 10px;
+    border: 1px solid blacks;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin: .6em ;
+    margin-top: 1.4em;
+    background-color: rgb(255, 127, 0);
+    border: 1px solid #000;
+
+
+}
+/*
+pseudoclases para elemento enlace
+*/
+a{
+    color: rgb(255, 127, 0);
+    font-family: Verdana, sans-serif;
+}
+a:hover{
+    color: tomato;
+}
+a:active{
+    color: blue;
+}
+/*
+hasta esta linea *
+*/
+.article1{
+    grid-area:article1 ;
+}
+.article2{
+    grid-area: article2;
+}
+.article3{
+    grid-area: article3 ;
+}
+.section1{
+ grid-area: section1;
+}
+.section2{
+    grid-area: section2;
+}
+.nav{
+    border-bottom: 1px solid #000;
+    grid-area: nav;
+    margin-bottom: 10px;
+
+}
+.article1,
+.article2,
+.article3,
+.section1,
+.section2{
+    border: 1px solid #000;
+    margin: 5px 5px 5px 0px;
+ 
+}
+.article1,
+.article2,
+.section1,
+.section2{
+    padding: 20px;
+}
+
+/*se organizan areas dentro del contenedor grid (principal)*/
+.container-grid{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template: 
+    "header" 120px
+    "main" 800px
+    "footer" 140px /100%
+    
+    
+    ;
+}
+/*se aplica display grid para */
+.main{
+
+
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "article1"
+    "article2"
+    "article3"
+    "section1"
+    "section2"
+    ;
+    grid-template: 
+    "nav nav nav nav nav "  60px
+    "article1 article1 article2 article2 article3"   400px 
+    "section1 section1 section1 section2 section2"  320px
+     /15% 15% 15% 15% 40%
+    
+    
+    ;
+
+}
+
+
+/*----------------------CONTROL DEL SLIDER--------------------------------------------------*/
+
+/*
+bloque donde se encuentra 
+funciones para el slider 
+*/
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+
+}
+.imagenes_slide {
+	width: 100%;
+	height:100%;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+.slides ul{
+	list-style: none;
+
+}
+
+.slides li{
+		list-style: none;
+		padding: 0;
+	}
+
+.slide {
+	width: 100%;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 13s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slide img {
+    width: 100%;
+    height: 388px;
+	display: block;
+}
+
+.slider-controler li {
+	display: inline-block;
+	vertical-align: top;
+}
+/*hasta la linea 240 se crea 
+la animacion del eslider
+*/

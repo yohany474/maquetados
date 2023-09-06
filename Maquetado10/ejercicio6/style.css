@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*se aplica propiedades al elemento header*/
+.header{
+    grid-area: header ;
+    margin-bottom: 10px;
+    background-color: beige;
+    border-bottom: 1px solid #000;
+    display: flex;
+    justify-content: stretch;
+    justify-items: center;
+}
+/*se aplica propiedades al elemento footer*/
+.footer{
+
+    grid-area: footer;
+    margin-top: 10px;
+    border: 1px solid blacks;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin: .6em ;
+    margin-top: 1.4em;
+    background-color: rgb(255, 127, 0);
+    border: 1px solid #000;
+
+
+}
+.footer  img{
+    width: 120px;
+    height: 100px;
+    
+
+}
+/*se aplica propiedades al elemento nav*/
+.nav{
+    grid-area: nav;
+}
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+}
+.nav li{
+    margin: 5px 0px;
+    padding: 10px;
+    list-style: none;
+}
+/*secciones se aplican propiedades a cada elemento */
+.section1{
+ grid-area: section1;
+}
+.section2{
+    grid-area: section2;
+    margin-right: 10px;
+}
+.section3{
+    grid-area: section3;
+    margin-left: 10px;
+}
+.nav,
+.section1,
+.header,
+.section2,
+.section3{
+    border: 1px solid #000;
+    margin-top: 10px ;
+}
+/*propiedades al contenedor grid  se nombran se ordenan las areas y se dan tamaños a cada co*/
+.container-grid{
+
+    display: grid;
+    grid-template-areas: 
+    "nav"
+    "header"
+    "section1"
+    "section2"
+    "section3"
+
+    ;
+    grid-template: 
+    "nav nav" 100px   /*<--altura a fila 1 nav*/
+    "header header" 110px /*<--altura a fila 2 header*/
+    "section1 section1" 300px /*<--altura a fila 3 section1 section1*/
+    "section2 section3" 300px /*<--altura a fila 4 section2 section3*/
+    "footer footer" 130px /50% 50% /*<--altura a fila 5 contiene el pie de pagina*/
+
+    
+    
+    ;
+}
+/*elementos p h3 demas propiedades a los elementos dentro dle maquetado*/
+a{
+    color: rgb(255, 127, 0);
+    font-family: Verdana, sans-serif;
+}
+h3{
+    font-family: Tahoma, sans-serif;
+}
+p{
+    font-family: Verdana, sans-serif;
+}
+span{
+    color:rgb(255, 127, 0);
+} 
+h2{
+    font-size: 1.5em;
+    font-family: Tahoma, sans-serif;
+}
+#line{
+    width: 11px;
+    height: 80px;
+    margin: 0px 5px 0px em;
+}
+.div{
+    color: #fff;
+}
+.header img{
+    height: 80px;
+    width: 82px;
+}

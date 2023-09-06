@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*elementos p h3, a, span, h2 */
+a{
+    color: rgb(255, 127, 0);
+    font-family: Verdana, sans-serif;
+}
+h3{
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+}
+p{
+    font-family: Verdana, sans-serif;
+}
+span{
+    color:rgb(255, 127, 0);
+} 
+h2{
+    font-size: 1.5em;
+    font-family: Tahoma, sans-serif;
+}
+
+
+/*
+se denominan areas grid para asi poder maquetar
+*/
+/*propiedades para el header*/
+.header{
+    grid-area: header;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: stretch;
+    justify-items: center;
+}
+/*seccion se aplica propiedes */
+.section1{
+grid-area: section1;
+margin-bottom: 15px;
+border-radius: 1em;
+
+}
+/*footer de la pagina se aplican propiedads*/
+.footer{
+    grid-area: footer;
+    margin-top: 10px;
+
+}
+.footer{
+    grid-area: footer;
+
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        margin: .6em ;
+        margin-top: 1.4em;
+        background-color: rgb(255, 127, 0);
+        border: 1px solid #000;
+    
+
+}
+#line{
+    width: 11px;
+    height: 80px;
+    margin: 0px 5px 0px em;
+}
+.div{
+    color: #fff;
+}
+.header img{
+    height: 80px;
+    width: 82px;
+}
+.footer img{
+    width: 120px;
+    height: 100px;
+    
+
+}
+/*article se aplican propiedades a 
+cada clase de contenido para article 
+*/
+.article1{
+    grid-area: article1;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-radius: 1em;
+}
+.article2{
+    grid-area: article2;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    border-radius: 1em;
+}
+.article3{
+    grid-area: article3;
+    margin: 0px 5px;
+    border-radius: 1em;
+    padding: 1em;
+}
+.article4{
+    grid-area: article4;
+    margin:0px 5px;
+    border-radius: 1em;
+    padding: 1em
+    
+    
+    
+    ;
+}
+/*se aplican las mismas propiedades a los elementos que estan separadados por (,) */
+.article1,
+.article2,
+.article3,
+.article4,
+.header,
+.section1,
+.footer
+{
+    border: 1px solid #000;
+    
+}
+
+/*se ordenan las areas que van a ir dentro de la pagina web*/
+.container-grid{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "article1"
+    "article2"
+    "section1"
+    "footer"
+    ;
+
+    grid-template: "header header"110px   /*<-altura a la fila numero 1 y areas que se van a ubicar-*/
+    "article1 article2" 380px/*<-altura a la fila numero 2 y areas que se van a ubicar-*/
+    "section1 section1 "430px/*<-altura a la fila numero 3 y areas que se van a ubicar-*/
+    "footer footer" 130px /50% 50%  /*<-altura a la fila numero 4 y areas que se van a ubicar-*/
+    ;
+}
+
+
+/*section grid se ordenan areas dentro de la section1 */
+.section1{
+    display: grid;
+    grid-template-areas: 
+    "article3" 
+    "article4"
+    ;
+    grid-template:
+     "section1 section1" 100px /*<-altura a la fila numero 1 y areas que se van a ubicar-*/
+     "article3 article4 " 300px/50% 50%; /*<-altura a la fila numero 2 y areas que se van a ubicar-*/
+}
+
+
+/*----------------------CONTROL DEL SLIDER--------------------------------------------------*/
+
+/*
+bloque donde se encuentra 
+funciones para el slider 
+*/
+@keyframes slide {
+	0% { transform: translateX(0); }
+	10% { transform: translateX(0); }
+
+	15% { transform: translateX(-100%); }
+	30% { transform: translateX(-100%); }
+
+	35% { transform: translateX(-200%); }
+	50% { transform: translateX(-200%); }
+
+	55% { transform: translateX(-300%); }
+	70% { transform: translateX(-300%); }
+
+	75% { transform: translateX(-400%); }
+	90% { transform: translateX(-400%); }
+
+
+}
+.imagenes_slide {
+    
+	width: 100%;
+	height:189px;
+	margin: 0 0px;
+    border-radius: 1em;
+}
+
+.slider {
+	position: relative;
+}
+
+.slides {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+}
+.slides ul{
+	list-style: none;
+
+}
+
+.slides li{
+		list-style: none;
+		padding: 0;
+	}
+
+.slide {
+	width: 100%;
+	flex-shrink: 0;
+	animation-name: slide;
+	animation-duration: 13s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slide img {
+    width: 100%;
+    height: 367px;
+	display: block;
+    border-radius: 1em;
+}
+
+.slider-controler li {
+	display: inline-block;
+	vertical-align: top;
+	
+}
+/*hasta la linea 149 se crea 
+la animacion del eslider
+*/
+
+

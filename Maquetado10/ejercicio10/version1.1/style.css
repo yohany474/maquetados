@@ -1,0 +1,375 @@
+
+/*
+se hizo unos cambios a la version anterior
+cambiando border de color negro a blanco 
+agregar mucha mas informacion en el pies de pagina ,
+se agrego nombre del designer 
+(Yohany Santanilla Mejia )
+aprendiz sena, se incluyo tambien un slider
+*/
+
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*stilos de fuente a elemntos h2,h3,p,span*/
+h3{
+    font-family: Tahoma, sans-serif;
+}
+h2{
+    font-size: 1.4em;
+    font-family: Tahoma, sans-serif;
+}
+p{
+    font-family: Verdana, sans-serif;
+    font-size: .8em;
+}
+span{
+    color: rgb(255, 127, 0) ;
+}
+
+/*
+pseudoclases para elemento a, li
+*/
+li{
+    list-style: none;
+}
+.div{
+    color: #fff;
+}
+a{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(212, 212, 212);
+}
+a:active{
+    color: blue;
+}
+
+/*
+se nombran areas grid 
+para cada elemento,
+estilos margenes padding border y demas stilos a los elementos 
+*/
+.art-creador{
+   grid-area: designer;
+   position: fixed;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-size: .6em;
+   color: rgb(132, 132, 132);
+}
+/*estilos al header se aplico display flex para alinear elementos*/
+ #header{
+    grid-area: header;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin: 0rem 0rem .5rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+ }
+ .header-left{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    justify-items: center;
+    align-items: center;
+ }
+ .header-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .art-f :hover{
+    border-radius: 50%;
+    background-color: lightblue;
+ }
+ .art-i :hover{
+    border-radius: 50%;
+    background-color: lightpink;
+ }
+ .art-w :hover{
+    border-radius: 50%;
+    background-color: lightgreen;
+ }
+ .art-f :active{
+    border-radius: 50%;
+    background-color: rgb(0, 191, 255);
+ }
+ .art-i :active{
+    border-radius: 50% 50%;
+    background-color: rgb(255, 139, 157);
+ }
+ .art-w :active{
+    border-radius: 50%;
+    background-color: rgb(87, 255, 87);
+ }
+ /*hasta la linea 94 son estilos para encabezado*/
+
+ /*------stilos para los dos navegadores ---------*/
+ #navar1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    grid-area: nav1;
+    border: 1px solid rgb(255, 255, 255);
+    margin: .5rem  .0rem .2rem .0rem;
+    background-color: rgb(255, 127, 0);
+ }
+ #navar2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    grid-area: nav2;
+    border: 1px solid rgb(255, 255, 255);
+    margin: .4rem .0rem .2rem .1rem;
+    background-color: rgb(255, 127, 0);
+ }
+
+/*se aplica propieades para elementos como secciones 1,2*/
+ #section1{
+    grid-area: section1;
+    border: 1.5px solid rgb(149, 147, 147);
+    margin: .5rem;
+    border-radius: 1em;
+ }
+ #section2{
+    grid-area: section2;
+    border: 1.5px solid rgb(149, 147, 147);
+    margin: .5rem;
+    border-radius: 1em;
+
+ }
+ #article-aside{
+    grid-area: article-aside;
+    border: 1px solid rgb(255, 255, 255);
+    margin: .5rem;
+    border-radius: 1em;
+ }
+ #iframe{
+    grid-area: iframee;
+    margin: .5rem;
+    overflow-y: scroll;
+ }
+ .div h3{
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   line-height: 2rem;
+}
+.div li{
+   text-align: center;
+}
+#article1{
+   padding: .5rem;
+   grid-area:article1 ;
+   border: 1px solid rgb(205, 205, 205);
+   margin: .5rem;
+   border-radius: 1em;
+}
+#article2{
+   padding: .5rem;
+   grid-area: article2;
+   border: 1px solid rgb(205, 205, 205);
+   margin: .5rem;
+   border-radius: 1em;
+}
+#aside-section1{
+   grid-area: aside-S1;
+   border: 1px solid rgb(205, 205, 205);
+   margin: .5rem;
+   padding: .5rem;
+   border-radius: 1em;
+}
+
+#aside-section2{
+   grid-area: aside-S2;
+   border: 1px solid rgb(205, 205, 205);
+   margin: .5rem;
+   padding: .5rem;
+   border-radius: 1em;
+}
+
+ /*aside principal contiene iframe para visualizar en tiempo real twitter*/
+ #aside-principal{
+    display: grid;
+    grid-area: aside-principal;
+
+    border: 1.5px solid rgb(149, 147, 147);
+    margin: .5rem;
+    border-radius: 1em;
+ }
+ /*propiedades para nuestro pie de pagina*/
+ #footer{
+    grid-area :footer;
+    border: 1px solid #fff;
+    margin: .4rem 0rem 0rem .1rem;
+    display: flex;
+    justify-content: space-between;
+    justify-items: start;
+    background-color: rgb(255, 127, 0);
+    padding: .5rem;
+    line-height: 1.2rem;
+
+ }
+
+
+
+ /*-----------------------AREAS DENTRO DEL CONTENIDO BODY PROPIEDADES GRID---------------------------------*/
+/*damos estructura a 
+nuestra pagina mediante grid
+*/
+
+.container-grid{
+    display: grid;
+    grid-template-areas: "designer" "header" "nav1" "nav2" "section1" "section2" "aside-principal" "footer" ; /*<--se ordena la distribucion de elementos grid*/
+    grid-template: 
+    "designer designer designer" 10px /*mi nombre */
+    "header header header" 94px /*<--altura a la primer fila*/
+    "nav1 nav1 nav1" 90px  /*<--altura a la segunda fila*/
+    "nav2 section1 aside-principal" 400px  /*<--altura a la tercer fila*/
+    "nav2 section2 aside-principal" 400px  /*<--altura a la cuarta fila*/
+    "footer footer footer" 120px/ 15% 55% 30% ; /*<--altura a la quinta fila*/
+ }
+ #section1{
+    display: grid;
+    grid-template-areas: "section1" "article1" "aside-S1"; /*<--se ordena la distribucion de elementos grid*/
+    grid-template: "section1 section1" 50px   /*<--altura a esta fila*/
+    "article1 aside-S1" 330px / 50% 50%;      /*<--altura a segunda fila dento de section1*/
+ }
+ #section2{
+    display: grid;
+    grid-template-areas: "section2" "article2" "aside-S2"; /*<--se ordena la distribucion de elementos grid*/
+    grid-template: "section2 section2" 50px /*<--altura a esta fila*/
+    "article2 aside-S2" 330px / 50% 50%;    /*<--altura a segunda fila dento de section2*/
+}
+ #aside-principal{
+    grid-template-areas:  "iframee" "article-aside";  /*<--se ordena la distribucion de elementos grid*/
+    grid-template: "iframee" 480px /*<--altura a la primera fila dentro del aside-principal*/
+    "article-aside" 300px /100%; /*<--altura a la segunda fila dentro del aside-principal*/
+ }
+
+/*----------dimensiones de imagenes--------*/
+
+#sena{
+    height: 82px;
+    width: 82px;
+}
+#linea{
+height: 82px;
+}
+#img-article-aside{
+    width: 340px;
+    height: 100%;
+    border-radius: 15px;
+}
+#footer div img{
+    width: 110px;
+    height: 99px;
+}
+
+
+/*slider*/
+/* Slideshow container */
+.slideshow-container {
+   max-width: 350px;
+   position: relative;
+   margin: auto;
+ }
+ 
+ /* Hide the images by default */
+ .mySlides {
+   display: none;
+ }
+ 
+ /* Next & previous buttons */
+ .prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+ }
+ 
+ /* Position the "next button" to the right */
+ .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+ 
+ /* On hover, add a black background color with a little bit see-through */
+ .prev:hover, .next:hover {
+   background-color: rgba(0,0,0,0.8);
+ }
+ 
+ /* Caption text */
+ .text {
+   color: #f2f2f2;
+   font-size: 15px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+ }
+ 
+ /* Number text (1/3 etc) */
+ .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+ }
+ 
+ /* The dots/bullets/indicators */
+ .dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+ }
+ 
+ .active, .dot:hover {
+   background-color: #717171;
+ }
+ 
+ /* Fading animation */
+ .fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+ }
+ 
+ @-webkit-keyframes fade {
+   from {opacity: .4} 
+   to {opacity: 1}
+ }
+ 
+ @keyframes fade {
+   from {opacity: .4} 
+   to {opacity: 1}
+ }

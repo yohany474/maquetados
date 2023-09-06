@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*stilos de fuente a elemntos h2,h3,p,span*/
+h3{
+    font-family: Tahoma, sans-serif;
+}
+h2{
+    font-size: 1.5em;
+    font-family: Tahoma, sans-serif;
+}
+p{
+    font-family: Verdana, sans-serif;
+    font-size: 1em;
+}
+span{
+    color: rgb(255, 127, 0) ;
+}
+/*
+pseudoclases para elemento a, li
+*/
+li{
+    list-style: none;
+}
+.div{
+    color: #fff;
+}
+a{
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 1.2rem;
+}
+a:hover{
+    color: rgb(212, 212, 212);
+}
+a:active{
+    color: blue;
+}
+
+/*se aplican propiedades a el elemento como lo son header*/
+.header{
+    grid-area: header ;
+    border: 1px solid#000;
+    margin: 0px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-position-x: left;
+    background-image: url("images/logo1.png");
+    background-repeat: no-repeat;
+    background-color: rgb(255, 127, 0);
+}
+.header span{
+    margin: 10px 10px;
+    height: 150px;
+    border: 1px solid #000;
+    color: white;
+}
+/*se aplica propiedades al footer de nuestra */
+.footer{
+
+    border: 1px solid #fff;
+    margin: .5rem;
+    display: flex;
+    justify-content: stretch;
+    justify-items: start;
+    background-color: rgb(255, 127, 0);
+    padding: .5rem;
+
+}
+.footer img{
+    width: 82px; 
+    height: 80px;
+}
+/*nav se le aplican propiedades al menu de navegacion */
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    grid-area: nav;
+    border: 1px solid #000;
+    margin: .5rem;
+    background-color: rgb(255, 127, 0);
+}
+/*propiedades a la secciones */
+.section1{
+    margin: 10px;
+    grid-area: section1;
+    border: 1px solid black;
+    padding: .5rem;
+}
+.section2{
+    grid-area: section2;
+    margin: 10px;
+    border: 1px solid black;
+    padding: .5rem;
+}
+/*contenedor grid y sus propiedades para el orden y maquetacion  de la pagina*/
+.container-grid{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "section1"
+    "section2"
+    "nav"
+    "footer"
+    ;
+    grid-template: "header"200px    /*<--altura de la primer fila de nuestra maqueta*/
+    "section1 "200px /*<--altura de la segunda fila de nuestra maqueta*/
+    "section2" 200px   /*<--altura de la tercer fila de nuestra maqueta*/
+    "nav"280px  /*<--altura de la cuarta fila de nuestra maqueta*/
+    "footer" 110px /100%   /*<--altura de la quinta fila de nuestra maqueta*/
+    ;
+}
